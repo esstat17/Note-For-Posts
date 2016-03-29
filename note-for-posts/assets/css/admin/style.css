@@ -1,0 +1,12 @@
+/**
+ * Stylesheet for Admin
+ *
+ */
+
+td.shortcode #mwp-input {
+    width: 95%;
+}
+.chosen-container-multi .chosen-choices {
+    border: 1px solid #ddd !important;
+    background-image: inherit !important;
+}
