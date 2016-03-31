@@ -26,11 +26,11 @@ if( !defined( 'ABSPATH' ) ) exit;
  * Shortcode Features and Usage
  * 
  * Just insert into Posts or Pages :)
- * [n4p-sc] - Display all testimonies
- * [n4p-sc id="ID"] - Display only particular testimonies
+ * [n4p-sc] - Display all Notes
+ * [n4p-sc id="ID"] - Display only particular note
  * [n4p-sc max="INT"] - Number of Notes per Page. Default 5
  * [n4p-sc sort="ASC"] - Sorting. Default to DESC
- * [n4p-sc sort="ASC" max="2"] - Results for Ascending and a max of 2 Note Array
+ * [n4p-sc sort="ASC" max="2"] - Sorted as ascending and a maximum of 2 results
  *
  */
 
@@ -87,7 +87,7 @@ function n4p_shortcode_func( $atts ) {
               'note_content'  => $note->post_content,
               'author_id'     => $note->post_author
             );
-            $friendly_html .= N4P()->html->text_slider($arr); 
+            $friendly_html .= N4P()->html->text_slider($arr); // @see includes/class-friendly-html.php
 			
 		}
 

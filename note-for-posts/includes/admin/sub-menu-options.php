@@ -141,6 +141,22 @@ function n4p_submenu_admin_page_callback() {
 					</tr>
 				</tbody>
 			</table>
+			<h2 class="title"><?php _e('Shortcode Features and Usage', 'n4p-txt'); ?></h2>
+			<p><?php _e('Just insert into Posts or Pages :)', 'n4p-txt'); ?></p>
+			<table class="form-table">
+				<tbody> 
+					<tr>
+						<ul>
+							<li><code>[n4p-sc]</code> - Display all Notes</li>
+							<li><code>[n4p-sc id="ID"]</code> - Display only a particular note</li>
+							<li><code>[n4p-sc max="INT"]</code> - Number of Notes per Page. Default 5</li>
+							<li><code>[n4p-sc sort="ASC"]</code> - Sorted as ascending. Default to DESC</li>
+							<li><code>[n4p-sc sort="ASC" max="2"]</code> - Sorted as ascending and a maximum of 2 results</li>
+						</ul>
+					</tr>
+				
+				</tbody>
+			</table>
 			<p class="submit"><input type="submit" name="submit" class="button-primary" value="<?php _e('Save Changes', 'n4p-txt'); ?>" /></p>
 		</form>
 	</div>
