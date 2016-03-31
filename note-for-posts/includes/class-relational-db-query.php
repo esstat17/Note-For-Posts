@@ -36,7 +36,8 @@ class N4P_DB_Query {
 	public function get_posts($post_id){ 	
 
 		$posts_with_note = array();
-		$args = array( 'post_type' => 'post'); // @todo just aim the correct post_type
+		$post_type = NOTE_FOR_POSTS_PTYPE; // default: $post_type = 'post'
+		$args = array( 'post_type' => $post_type);
 		$all_posts = get_posts($args); // Get WP Posts
 		$post_meta_key = 'n4p_postmeta_input_key'; // @todo make sure this is a correct key	
 
@@ -75,7 +76,7 @@ class N4P_DB_Query {
 
 		// Add some test data here - a custom field, that is
 		$meta_key='n4p_postmeta_input_key';
-		$selected_posts = array();	
+		$post_type = NOTE_FOR_POSTS_PTYPE; // default: $post_type = 'post'
 
 		// Only Execute if Post Meta Exist
 		if( get_post_meta( $post_id, $meta_key, true ) ) {
@@ -86,7 +87,7 @@ class N4P_DB_Query {
 			}
 
 			// Get Posts that was included in the `include` key
-			$args = array( 'post_type'		=> 'post', 
+			$args = array( 'post_type'		=> $post_type, 
 						   'numberposts'	=> '-1',
 						   'orderby'        => 'date',
 						   'order'          => 'DESC',

@@ -2,6 +2,7 @@
 /**
  * Dashboard to Manage Post Columns
  * 
+ * @see Manage Post Type Columns https://codex.wordpress.org/Plugin_API/Action_Reference/manage_$post_type_posts_custom_column
  * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_$post_type_posts_columns
  * @todo Replace only if your creating your own Plugin
  * @todo n4p - Find all and replace text
@@ -76,7 +77,7 @@ function n4p_column_table_description( $columns, $post_id) {
 		}
 	}
 }
-add_action( 'manage_posts_custom_column', 'n4p_column_table_description', 10, 2 );
+add_action( 'manage_'.NOTE_FOR_POSTS_PTYPE.'s_custom_column', 'n4p_column_table_description', 10, 2 );
 
 // Well, you can actually end here, but what if you want insert custom coloun into Post Columns?
 
@@ -91,7 +92,7 @@ function n4p_note_column_table_head($columns){
 	$columns = array_merge($columns, $defaults);
     return $columns;
 }
-add_filter( 'manage_post_posts_columns', 'n4p_note_column_table_head'); // manage_${post_type}_posts_columns
+add_filter( 'manage_'.NOTE_FOR_POSTS_PTYPE.'_posts_columns', 'n4p_note_column_table_head'); // manage_${post_type}_posts_columns
 
 /**
  * Manage Notes Table Description <td> Columns
@@ -102,7 +103,8 @@ add_filter( 'manage_post_posts_columns', 'n4p_note_column_table_head'); // manag
  * @return void
  */
 function n4p_note_column_table_description( $columns, $post_id ) {
-	if ( get_post_type( $post_id ) == 'post') {
+	$post_type = NOTE_FOR_POSTS_PTYPE; // default: $post_type = 'post'
+	if ( get_post_type( $post_id ) == $post_type) {
 		$link = "";
 		switch ( $columns ) {
 			case 'notes':
@@ -118,7 +120,7 @@ function n4p_note_column_table_description( $columns, $post_id ) {
 				}
 	}
 }
-add_action( 'manage_posts_custom_column', 'n4p_note_column_table_description', 10, 2 );
+add_action( 'manage_'.NOTE_FOR_POSTS_PTYPE.'_posts_custom_column', 'n4p_note_column_table_description', 10, 2 );
 
 /**
  * Registers the Sortable Columns

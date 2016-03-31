@@ -112,6 +112,7 @@ if( !class_exists( 'Note_For_Posts' ) ) {
             $this->plugin_name = 'note-for-posts'; // @todo replace it with your plugin name
             $this->setup_constants();
             $this->includes();    
+          
 
             // do_action( 'n4p_hooks' ); // This function invokes all functions attached to `ywp_hooks` action hook 
         }
@@ -157,9 +158,13 @@ if( !class_exists( 'Note_For_Posts' ) ) {
             // Plugin path
             $this->define( 'NOTE_FOR_POSTS_DIR', plugin_dir_path( __FILE__ ) );
             // Plugin URL
-            $this->define( 'NOTE_FOR_POSTS_URL', plugin_dir_url( __FILE__ ) );           
-        }
+            $this->define( 'NOTE_FOR_POSTS_URL', plugin_dir_url( __FILE__ ) );
 
+            // Attaching to Post Type: post (default)
+            // Getting the value from get_option() or `post` as default
+            $post_type = !get_option('n4p_option_1') ? 'post' : get_option('n4p_option_1'); 
+            $this->define( 'NOTE_FOR_POSTS_PTYPE', $post_type);
+        }
         
         /**
          * Run action and filter hooks

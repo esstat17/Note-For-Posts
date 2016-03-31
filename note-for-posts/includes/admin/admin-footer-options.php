@@ -16,7 +16,7 @@ if( !defined( 'ABSPATH' ) ) exit;
 function n4p_admin_footer_choosen() {
 
   // Simplified Conditional Statement
-  $placeholder = !get_option('n4p_option_1') ? __('Type and Search for Post(s)', 'n4p-txt') : get_option('n4p_option_1');
+  $placeholder = !get_option('n4p_option_2') ? __('Type and Search for Post(s)', 'n4p-txt') : get_option('n4p_option_2');
   ?>
   <script type="text/javascript">
     jQuery(document).ready(function($) {

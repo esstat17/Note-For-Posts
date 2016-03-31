@@ -91,10 +91,11 @@ function n4p_ajax_handler() {
   }
 
   $new_single = array();
-
+  $post_type = NOTE_FOR_POSTS_PTYPE; // default: $post_type = 'post'
+  
   // Get all posts array
   $args = array( 
-            'post_type'        => 'post',  // Post Type called `post`
+            'post_type'        => $post_type,  // Post Type called `post`
             'numberposts'      => '-1',
             'orderby'          => 'date',
             'order'            => 'DESC',

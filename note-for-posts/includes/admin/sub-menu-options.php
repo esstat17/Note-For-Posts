@@ -33,30 +33,6 @@ function n4p_register_submenu() {
 add_action( 'admin_menu', 'n4p_register_submenu');
 
 /**
- * Selected and Checker Function
- * Check if it was selected or checked
- *
- * @since 1.0
- * @param string $option_name from get_option WP Function
- * @param string $option_value from get_option WP Function
- * @return string $choosed Return wheter selected, checked, or empty string
- */
-function n4p_is_selected($option_name, $option_value){
-	$choosed = '';
-
-	// Conditional for Select input
-	if( !empty($option_value) && get_option($option_name) == $option_value){
-		$choosed = 'selected="selected"';
-		return $choosed;
-	}
-	// Conditional Statement for Checkbox
-	if(get_option($option_name) && empty($option_value)){
-		$choosed = 'checked="checked"';
-	}
-	return $choosed;
-}
-
-/**
  * WP Options (Get, Update, and Add)
  *
  * @see Options API (https://codex.wordpress.org/Options_API)
@@ -97,37 +73,30 @@ function n4p_submenu_admin_page_callback() {
 		<form method="post" action="<?php echo esc_attr($_SERVER["REQUEST_URI"]); ?>">
 			<?php wp_nonce_field('np4_option_action','n4p_option_field'); ?>
 			<table class="form-table">
-				<tbody> 
+				<tbody>
 					<tr>
-						<th scope="row"><label for="option1"><?php _e('Placeholder for Post Search (optional)', 'n4p-txt'); ?></label></th>
-						<td><input class="n4p_option_1 regular-text" name="n4p_option_1" type="text" value="<?php echo get_option('n4p_option_1'); ?>"></td>
-					</tr>
-					<tr>
-						<th scope="row"><label for="option2"><?php _e('Sort:', 'n4p-txt'); ?></label></th>
+						<th scope="row"><label for="n4p_option_1"><?php _e('Attached to Post Type:', 'n4p-txt'); ?></label></th>
 						<td>
-							<select name="n4p_option_2" class="n4p_option_2">
-								<option value="ASC" <?php echo n4p_is_selected('n4p_option_2', 'ASC'); ?>>Ascending</option>
-								<option value="DESC" <?php echo n4p_is_selected('n4p_option_2', 'DESC'); ?>>Descending</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row"><label for="option7"><?php _e('Attached to Post Type:', 'n4p-txt'); ?></label></th>
-						<td>
-							<select name="n4p_option_7" class="n4p_option_7">
+							<select name="n4p_option_1" class="n4p_option_1">
 							<?php
 								// Get Post Type List @see https://codex.wordpress.org/Function_Reference/get_post_types
-								foreach ( get_post_types( '', 'names' ) as $post_type ) {
+								foreach ( get_post_types( '', 'names' ) as $post_type ):
 									// Just Omit the Post Type `note`
-									if($post_type!='note'){
-   										echo "<option value=\"{$post_type}\" ".n4p_is_selected('n4p_option_7', $post_type).">{$post_type}</option>";
-   									}
-								}
+									if($post_type!='note'):
 							?>
-						
+   										<option value="<?php echo $post_type; ?>" <?php echo selected(get_option('n4p_option_1'), $post_type); ?>><?php echo $post_type; ?></option>
+   							<?php		
+   									endif;
+								endforeach;
+							?>
 							</select>
+							<?php _e('Default: <kbd>post</kbd>', 'n4p-txt'); ?>
 						</td>
 					</tr>
+					<tr>
+						<th scope="row"><label for="n4p_option_2"><?php _e('Placeholder for Post Search (optional)', 'n4p-txt'); ?></label></th>
+						<td><input class="n4p_option_2 regular-text" name="n4p_option_2" type="text" value="<?php echo get_option('n4p_option_2'); ?>"></td>
+					</tr>	
 				</tbody>
 			</table>
 			<h2 class="title"><?php _e('Display Settings', 'n4p-txt'); ?></h2>
@@ -137,8 +106,8 @@ function n4p_submenu_admin_page_callback() {
 					<tr>
 						<th scope="row"><?php _e('Don\'t Display Title', 'n4p-txt'); ?></th>
 						<td>
-							<label for="option3">
-								<input class="n4p_option_3" name="n4p_option_3" type="checkbox" value="1" <?php echo n4p_is_selected('n4p_option_3', ''); ?>>
+							<label for="n4p_option_3">
+								<input class="n4p_option_3" name="n4p_option_3" type="checkbox" value="1" <?php checked(get_option('n4p_option_3'), 1); ?>>
 							<?php _e('Remove <kbd>post_title</kbd> from the display', 'n4p-txt'); ?>
 							</label>
 						</td>
@@ -146,8 +115,8 @@ function n4p_submenu_admin_page_callback() {
 					<tr>
 						<th scope="row"><?php _e('Don\'t Display Content', 'n4p-txt'); ?></th>
 						<td>
-							<label for="option4">
-								<input class="n4p_option_4" name="n4p_option_4" type="checkbox" value="1" <?php echo n4p_is_selected('n4p_option_4', ''); ?>>
+							<label for="n4p_option_4">
+								<input class="n4p_option_4" name="n4p_option_4" type="checkbox" value="1" <?php checked(get_option('n4p_option_4'), 1); ?>>
 							<?php _e('Remove <kbd>post_content</kbd> from the display', 'n4p-txt'); ?>
 							</label>
 						</td>
@@ -155,8 +124,8 @@ function n4p_submenu_admin_page_callback() {
 					<tr>
 						<th scope="row"><?php _e('Don\'t Display Author', 'n4p-txt'); ?></th>
 						<td>
-							<label for="option5">
-								<input class="n4p_option_5" name="n4p_option_5" type="checkbox" value="1" <?php echo n4p_is_selected('n4p_option_5', ''); ?>>
+							<label for="n4p_option_5">
+								<input class="n4p_option_5" name="n4p_option_5" type="checkbox" value="1" <?php checked(get_option('n4p_option_5'), 1); ?>>
 							<?php _e('Remove <kbd>author</kbd> from the display', 'n4p-txt'); ?>
 							</label>
 						</td>
@@ -164,8 +133,8 @@ function n4p_submenu_admin_page_callback() {
 					<tr>
 						<th scope="row"><?php _e('Don\'t Display Date', 'n4p-txt'); ?></th>
 						<td>
-							<label for="option6">
-								<input class="n4p_option_6" name="n4p_option_6" type="checkbox" value="1" <?php echo n4p_is_selected('n4p_option_6', ''); ?>>
+							<label for="n4p_option_6">
+								<input class="n4p_option_6" name="n4p_option_6" type="checkbox" value="1" <?php checked(get_option('n4p_option_6'), 1); ?>>
 							<?php _e('Remove <kbd>date</kbd> from the display', 'n4p-txt'); ?>
 							</label>
 						</td>

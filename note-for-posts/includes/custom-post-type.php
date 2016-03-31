@@ -14,7 +14,6 @@
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-
 /**
  * Custom Post Type Function
  * @since       1.0.0
