@@ -108,13 +108,10 @@ if( !class_exists( 'Note_For_Posts' ) ) {
          */
 
         public function __construct() {
-
             $this->plugin_name = 'note-for-posts'; // @todo replace it with your plugin name
             $this->setup_constants();
             $this->includes();    
-          
-
-            // do_action( 'n4p_hooks' ); // This function invokes all functions attached to `ywp_hooks` action hook 
+            do_action( 'n4p_hooks' ); // This function invokes all functions attached to `ywp_hooks` action hook 
         }
 
         /**
