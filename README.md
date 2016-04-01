@@ -4,7 +4,7 @@ Adding note to Wordpress post or any post types such as page, attachment, woocom
 
 Employs the best coding pratices for you to create your own plugin by providing you a quick TODOs to make an easier modification and customization.
 
-## Quick TODOS 
+## Quick TODOs
 Just find and replace text using your favorite editor such as sublime, notepad++, text wrangler, etc
 ### Only Replace If You Are Creating Your Own Plugin
  * @todo replace Plugin Name
@@ -16,10 +16,11 @@ Just find and replace text using your favorite editor such as sublime, notepad++
  * @todo replace Author URI
 
 Find and Replace to each files.
- * @todo Note_For_Posts - Find all and replace text
- * @todo N4P - Find all and replace text
- * @todo n4p - Find all and replace text
- * @todo NOTE_FOR_POSTS - Find all and replace text
+ * @todo `Note_For_Posts` Main Class Name. Find all and replace text
+ * @todo `N4P` - Prefices for Classes. Find all and replace text
+ * @todo `n4p` - Prefixes for Functions. Find all and replace text
+ * @todo `note` - Post Type. Find all and replace text
+ * @todo `NOTE_FOR_POSTS` - Constant. Find all and replace text
 
 Don't forget to change the filename to your own custom plugin.
 
