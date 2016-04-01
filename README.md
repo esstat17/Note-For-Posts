@@ -1,39 +1,49 @@
-# WordPress Plugin Boilerplate
+# Note for Posts and WordPress Plugin Boilerplate
 
-A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.
+Adding note to Wordpress post or any post types such as page, attachment, woocommerce products, easy digital downloads and other registered Wordpress Post Type.
 
-## 7 Quick TODOS
-Getting rid of too many `Plugin Name` related edits. Have a quick edits and your ready to go.
-* @todo 1. Replace all TODOS
+Employs the best coding pratices for you to create your own plugin by providing you a quick TODOs to make an easier modification and customization.
 
+## Quick TODOS 
+Just find and replace text using your favorite editor such as sublime, notepad++, text wrangler, etc
+### Only Replace If You Are Creating Your Own Plugin
+ * @todo replace Plugin Name
+ * @todo replace Plugin URI
+ * @todo replace Description
+ * @todo replace Version
+ * @todo replace Text Domain
+ * @todo replace Author
+ * @todo replace Author URI
 
-The rest documents are from Original Repo.
+Find and Replace to each files.
+ * @todo Note_For_Posts - Find all and replace text
+ * @todo N4P - Find all and replace text
+ * @todo n4p - Find all and replace text
+ * @todo NOTE_FOR_POSTS - Find all and replace text
+
+Don't forget to change the filename to your own custom plugin.
+
 
 ## Contents
 
-The WordPress Plugin Boilerplate includes the following files:
+The Note for Posts Plugin includes the following files:
 
 * `.gitignore`. Used to exclude certain files from the repository.
 * `CHANGELOG.md`. The list of changes to the core project.
 * `README.md`. The file that you’re currently reading.
-* A `note-for-post` directory that contains the source code - a fully executable WordPress plugin.
+* A `note-for-posts` directory that contains the source code - a fully executable WordPress plugin.
 
 ## Features
-* Get rid of too many "Plugin Name" edits. 
+* Able to add custom notes (testimonials, feedbacks, comments, etc) to a particular post type such as page, post, product (Woocommerce), download (Easy Digital Downloads), and other registered post type.
+* Able to display results through widget and shortcode.
 * The Boilerplate is based on the [Plugin API](http://codex.wordpress.org/Plugin_API), [Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards), and [Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/).
-* All classes, functions, and variables are documented so that you know what you need to be changed.
+* All classes, functions, and variables are well-documented so that you know what you need to be changed.
 * The Boilerplate uses a strict file organization scheme that correspond both to the WordPress Plugin Repository structure, and that make it easy to organize the files that compose the plugin.
 * The project includes a `.pot` file as a starting point for internationalization.
 
 ## Installation
 
-The Boilerplate can be installed directly into your plugins folder "as-is". You will want to rename it and the classes inside of it to fit your needs.
-
 Note that this will activate the source code of the Boilerplate, with real functionalities such as meta boxes, custom post type, shortcodes, taxonomies, admin settings.
-
-## WordPress.org Preparation
-
-The original launch of this version of the boilerplate included the folder structure needed for using your plugin on the WordPress.org. That folder structure has been moved to its own repo here: https://github.com/DevinVinson/Plugin-Directory-Boilerplate
 
 ## Recommended Tools
 
@@ -71,31 +81,16 @@ For reference, [here's a discussion](http://make.wordpress.org/themes/2013/03/04
 
 Note that if you include your own classes, or third-party libraries, there are three locations in which said files may go:
 
-* `note-for-post/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
-* `note-for-post/admin` is for all admin-specific functionality
-* `note-for-post/public` is for all public-facing functionality
+* `note-for-posts/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
+* `note-for-posts/includes/admin` is for all admin-specific functionality
+* `note-for-posts/language` is for languages
 
-Note that previous versions of the Boilerplate did not include `Plugin_Name_Loader` but this class is used to register all filters and actions with WordPress.
-
-The example code provided shows how to register your hooks with the Loader class.
-
-### What About Other Features?
-
-The previous version of the WordPress Plugin Boilerplate included support for a number of different projects such as the [GitHub Updater](https://github.com/afragen/github-updater).
-
-These tools are not part of the core of this Boilerplate, as I see them as being additions, forks, or other contributions to the Boilerplate.
-
-The same is true of using tools like Grunt, Composer, etc. These are all fantastic tools, but not everyone uses them. In order to  keep the core Boilerplate as light as possible, these features have been removed and will be introduced in other editions, and will be listed and maintained on the project homepage
 
 # Credits
-
+Official Wordpress Documentation
 Wordpress Functions was created by [Elvin D.](https://twitter.com/esstat17).
-
-The WordPress Plugin Boilerplate was started in 2011 by [Tom McFarlin](http://twitter.com/tommcfarlin/) and has since included a number of great contributions. In March of 2015 the project was handed over by Tom to Devin Vinson.
-
-The current version of the Boilerplate was developed in conjunction with [Josh Eaton](https://twitter.com/jjeaton), [Ulrich Pogson](https://twitter.com/grapplerulrich), and [Brad Vincent](https://twitter.com/themergency).
-
+[WordPress Plugin Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate) - A standardized, organized, object-oriented foundation for building high-quality WP Plugins
+[EDD Extension Boilerplate](https://github.com/easydigitaldownloads/EDD-Extension-Boilerplate) serves as a foundation and aims to provide a standardized guide for building extensions. 
 
 ## Documentation, FAQs, and More
-
-If you’re interested in writing any documentation or creating tutorials please [let me know](http://innovedesigns.com/contact/) .
+If you’re interested in writing any documentation or creating tutorials please [let me know](http://innovedesigns.com/contact/)
