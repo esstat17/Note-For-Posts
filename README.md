@@ -24,6 +24,12 @@ Find and Replace to each files.
 
 Don't forget to change the filename to your own custom plugin.
 
+## Screenshots
+Screenshot Taken from the Widget
+![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/assets/images/screenshot-1.png)
+
+Screenshot Taken from the Admin
+![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/assets/images/screenshot-2.png)
 
 ## Contents
 
