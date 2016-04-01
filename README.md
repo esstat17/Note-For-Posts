@@ -6,7 +6,7 @@ Employs the best coding pratices for you to create your own plugin by providing 
 
 ## Quick TODOs
 Just find and replace text using your favorite editor such as sublime, notepad++, text wrangler, etc
-### Only Replace If You Are Creating Your Own Plugin
+> Only Replace If You Are Creating Your Own Plugin
  * @todo replace Plugin Name
  * @todo replace Plugin URI
  * @todo replace Description
