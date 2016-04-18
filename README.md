@@ -1,6 +1,6 @@
 # Note for Posts and WordPress Plugin Boilerplate
 
-Adding note to Wordpress post or any post types such as page, attachment, woocommerce products, easy digital downloads and other registered Wordpress Post Type.
+Add note to Wordpress post types such as post, page, attachment, download (Easy Digital Downloads), product (WooComerce), and other existing registered Wordpress Post Types.
 
 Employs the best coding pratices for you to create your own plugin by providing you a quick TODOs to make an easier modification and customization.
 
@@ -25,11 +25,14 @@ Find and Replace to each files.
 Don't forget to change the filename to your own custom plugin.
 
 ## Screenshots
-### Screenshot Taken from the Widget
-![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/assets/images/screenshot-1.png)
+### Screenshot Taken from the Frontend with Widget
+![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/screenshots/screenshot-1.png)
 
-### Screenshot Taken from the Admin
-![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/assets/images/screenshot-3.png)
+### Screenshot Taken from the Dashboard > View Notes
+![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/screenshots/screenshot-2.png)
+
+### Screenshot Taken from the Dashboard > Note Settings
+![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/screenshots/screenshot-3.png)
 
 ## Contents
 
@@ -38,6 +41,7 @@ The Note for Posts Plugin includes the following files:
 * `.gitignore`. Used to exclude certain files from the repository.
 * `CHANGELOG.md`. The list of changes to the core project.
 * `README.md`. The file that you’re currently reading.
+* `screenshots`. Plugin's Look-like.
 * A `note-for-posts` directory that contains the source code - a fully executable WordPress plugin.
 
 ## Features

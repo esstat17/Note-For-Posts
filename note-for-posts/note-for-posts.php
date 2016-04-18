@@ -11,7 +11,7 @@
  *
  * @package         N4P
  * @author          esstat17
- * @copyright       Copyright (c) 2016
+ * @copyright       Copyright (c) 2016 
  *
  * @todo Replace only if your creating your own Plugin
  * @todo replace Plugin Name
@@ -28,7 +28,7 @@
  * @todo NOTE_FOR_POSTS - Find all and replace text
  *
  *
- * IMPORTANT! Ensure that you make the following adjustments
+ * IMPORTANT! Ensure that you make the following amendments
  * before releasing your extension:
  *
  * Copyright 2016 (email : esstat17 at GMAIL.com)
