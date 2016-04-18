@@ -25,14 +25,14 @@ Find and Replace to each files.
 Don't forget to change the filename to your own custom plugin.
 
 ## Screenshots
-### Screenshot Taken from the Frontend with Widget
-![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/screenshots/screenshot-1.png)
+**Screenshot Taken from the Frontend with Widget**
+![alt frontend](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/screenshots/screenshot-1.png)
 
-### Screenshot Taken from the Dashboard > View Notes
-![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/screenshots/screenshot-2.png)
+**Screenshot Taken from the Dashboard > View Notes**
+![alt viewnotes](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/screenshots/screenshot-2.png)
 
-### Screenshot Taken from the Dashboard > Note Settings
-![alt tag](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/note-for-posts/screenshots/screenshot-3.png)
+**Screenshot Taken from the Dashboard > Note Settings**
+![alt notesetttings](https://raw.githubusercontent.com/esstat17/Note-For-Posts/master/screenshots/screenshot-3.png)
 
 ## Contents
 
