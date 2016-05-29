@@ -3,6 +3,10 @@
  *
  */ 
 
+.note-content span{
+	display: block;
+}
+
 .sss .note-list {
 	background:#fefabc; 
 	-moz-transform: rotate(1deg);

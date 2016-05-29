@@ -3,7 +3,7 @@ Contributors: esstat17
 Donate link: http://innovedesigns.com/
 Tags: post, page, edd, download, product
 Requires at least: 3.0.1
-Tested up to: 4.4
+Tested up to: 4.5
 Stable tag: 4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -68,10 +68,14 @@ Just insert into Posts or Pages :)
 
 == Changelog ==
 
+= 1.0.1 - 2016-05-30 = 
+* [Added] Plain HTML Options
 = 1.0.0 - 2016-04-07 = 
 * Initial Released Date
 
 == Upgrade Notice ==
 
+= 1.0.1 - 2016-05-30 = 
+* [Added] Plain HTML Option
 = 1.0.0 - 2016-04-07 = 
 * Initial Released Date

@@ -139,6 +139,15 @@ function n4p_submenu_admin_page_callback() {
 							</label>
 						</td>
 					</tr>
+					<tr>
+						<th scope="row"><?php _e('Plain HTML', 'n4p-txt'); ?></th>
+						<td>
+							<label for="n4p_option_7">
+								<input class="n4p_option_6" name="n4p_option_7" type="checkbox" value="1" <?php checked(get_option('n4p_option_7'), 1); ?>>
+							<?php _e('Make a plain HTML output instead.', 'n4p-txt'); ?>
+							</label>
+						</td>
+					</tr>
 				</tbody>
 			</table>
 			<h2 class="title"><?php _e('Shortcode Features and Usage', 'n4p-txt'); ?></h2>

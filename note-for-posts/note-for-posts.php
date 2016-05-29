@@ -3,7 +3,7 @@
  * Plugin Name:     Add Note for WP Posts
  * Plugin URI:      http://innovedesigns.com/
  * Description:     Add Notes for WP Posts and a boilerplate for fast WP Plugin Development
- * Version:         1.0.0
+ * Version:         1.0.1
  * Author:          esstat17
  * Author URI:      http://innovedesigns.com/
  * Text Domain:     n4p-txt

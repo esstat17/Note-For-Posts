@@ -3,13 +3,17 @@
  * Register Widget for Note
  * 
  * @see Widget API at https://developer.wordpress.org/reference/functions/wp_footer/
+ * @since  1.0.2
  * @todo Replace only if your creating your own Plugin
  * @todo n4p - Find all and replace text
  *        
  */
 
 function n4p_frontend_footer_scripts(){
+	$plain_html = get_option('n4p_option_7', 0);
+	if(empty($plain_html)):
 ?>
+
 <script type="text/javascript">
   jQuery(document).ready(function($) { 
     $('.note-content').sss({
@@ -22,6 +26,7 @@ function n4p_frontend_footer_scripts(){
   })
 </script>
 <?php   
+	endif;
 }
 add_action('wp_footer', 'n4p_frontend_footer_scripts');
 
